@@ -1,0 +1,58 @@
+<!-- Author -: Mohd Umar (Master-Tech271) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom css for speedometer -->
+	<link href="css/speedometer.css" rel="stylesheet" type="text/css" />
+    <title>SpeedoMeter | Mohd Umar</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center bg-warning my-auto">
+                <p class="display-4 text-danger">
+                    Car Dashboard
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-success display-3">Real Time SpeedoMeter</p>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                    <input type="number" class="" placeholder="Enter the Value" required id="value">           
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- custom javascript for speedometer -->
+<script src="js/speedometer.js"></script> 
+<script type="text/javascript">
+    $('#value').keyup(function(){
+        var sp = $('#value').val();
+        if(sp<0 || sp>180) {
+            alert("Minimum Speed will be 1 and Maximum Speed will be 180");
+            $('#value').val('');
+        }   
+    });
+	$("#value").speed({divFact:10,eventListenerType:'keyup'});
+</script>
+  </body>
+</html>
